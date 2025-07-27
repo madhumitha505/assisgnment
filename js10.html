@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const seasonChecker = {
+    getSeason: function(month) {
+        switch (month.toLowerCase()) {
+            case "december":
+            case "january":
+            case "february":
+                console.log("Winter");
+                break;
+
+            case "march":
+            case "april":
+            case "may":
+                console.log("Summer");
+                break;
+
+            case "june":
+            case "july":
+            case "august":
+                console.log("Monsoon");
+                break;
+
+            case "september":
+            case "october":
+            case "november":
+                console.log("Autumn/Post-monsoon");
+                break;
+
+            default:
+                console.log("Invalid month");
+        }
+    }
+};
+seasonChecker.getSeason("January");   
+seasonChecker.getSeason("june");      
+seasonChecker.getSeason("October");   
+seasonChecker.getSeason("abc");       
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function ratingMovie(movie) {
+            const rating = movie.rating;
+            if(rating >=9) {
+               console.log("The movie is a Blockbuster!"); 
+            }
+            else if(rating >=8){
+                console.log("The movie is a Superhit!");
+            }
+            else if(rating >=6.5){
+                console.log("The movie is a Hit.");
+            }
+            else if (rating >= 5) {
+                console.log("The movie is Average.");
+            }
+            else {
+                console.log("The movie is a Flop.");
+            }
+        }
+        const movie1 = { title:"orange", rating: 9.3};
+        const movie2 = { title:"sakhi", rating : 8};
+        const movie3 = {title:"avara",rating : 6.7};
+        const movie4 = {title:"kannappa",rating : 5};
+        const movie5 = {title:"yatra2",rating : 4};
+        ratingMovie(movie1);
+        ratingMovie(movie2);
+        ratingMovie(movie3);
+        ratingMovie(movie4);
+        ratingMovie(movie5);    
+    </script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function printBookDetails(book) {
+            const title = book.title;
+            const author = book.author;
+            const year = book.year ;
+            const publisher = book.publisher;
+            const genre = book.genre;
+            
+            console.log("Book Details:");
+            console.log("title" +title)
+            console.log("author: " + author);
+            console.log("year: " + year);
+            console.log("publisher: " + publisher);
+            console.log("genre: " + genre);
+        }
+
+        let mybook = {
+            title: '1984',
+            author: 'George Orwell',
+            year: '1949',
+        }
+
+        printBookDetails(mybook);
+    </script>
+</body>
+</html>

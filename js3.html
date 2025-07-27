@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function getTotalScore(students) {
+            let total = 0;
+            for (let i = 0; i < students.length; i++) {
+                total += students[i].score;
+            }
+            return total;
+        }
+        const studentArray = [{name:"madhu",score:99},
+         {name:"rishi",score: 88},
+         {name:"akki",score:77}];
+         const totalScores = getTotalScore(studentArray);
+         console.log(totalScores);
+    </script>
+</body>
+</html>

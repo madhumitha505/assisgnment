@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Rank</title>
+</head>
+<body>
+    <script>
+        function getHighestRank(studentArray) {
+            for (let i = 0; i < studentArray.length; i++) {
+                let sum = 0;
+                let marks = studentArray[i].marks;
+                for (let j = 0; j < marks.length; j++) {
+                    sum += marks[j];
+                }
+                 studentArray[i].total = sum;
+            }
+
+            for (let i = 0; i < studentArray.length - 1; i++) {
+                for (let j = 0; j < studentArray.length - i - 1; j++) {
+                    if (studentArray[j].total < studentArray[j + 1].total) {
+                        let temp = studentArray[j];
+                        studentArray[j] = studentArray[j + 1];
+                        studentArray[j + 1] = temp;
+                    }
+                }
+            }
+
+            return studentArray[1];
+        }
+
+        const studentArray = [
+            { name: "madhu", marks: [22, 78, 88, 90] },
+            { name: "rishi", marks: [45, 67, 89, 99] },
+            { name: "akki", marks: [67, 99, 88, 90] }
+        ];
+
+        const second = getHighestRank(studentArray);
+        console.log("Second Highest Rank:", second);
+    </script>
+</body>
+</html>

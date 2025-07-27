@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const store = {
+            products: [],
+            addProduct: function(product) {
+                this.products.push(product);
+            },
+            groupByCategory: function() {
+                const grouped = {};
+                this.products.forEach(function(product) {
+                    if (!grouped[product.category]) {
+                        grouped[product.category] = [];
+                    }
+                    grouped[product.category].push(product);
+                });
+                return grouped;
+        }
+    };
+    store.addProduct({ name: "iPhone 14", category: "Electronics", price: 79900 });
+    store.addProduct({ name: "T-Shirt", category: "Clothing", price: 999 });
+    store.addProduct({ name: "Laptop", category: "Electronics", price: 55000 });
+    store.addProduct({ name: "Jeans", category: "Clothing", price: 1999 });
+    store.addProduct({ name: "Rice Bag", category: "Groceries", price: 450 });
+    const groupedProducts = store.groupByCategory();
+    console.log(groupedProducts);
+
+    </script>
+</body>
+</html>

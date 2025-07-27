@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    function Book(title, author) {
+        this.title = title;
+        this.author = author;
+    }
+    const library = {
+        books: [],
+        addBook: function(title, author) {
+            const newBook = new Book(title, author);
+            this.books.push(newBook);
+        },
+        listBooks: function() {
+            this.books.forEach(function(book, index) {
+                console.log((index + 1) + ". Title: " + book.title + ", Author: " + book.author);
+            });
+    }
+};
+library.addBook("mahaprasthanam", "sri-sri");
+library.addBook("veyyipadalu", "veturi");
+library.listBooks();
+
+</script>
+</body>
+</html>
